@@ -6,8 +6,7 @@
 <title>Erbschaftsteuer-Rechner 2026 — Freibeträge & Steuersätze | Kanzlei Hodzic</title>
 <meta name="description" content="Erbschaftsteuer und Schenkungsteuer kostenlos berechnen: Freibeträge nach § 16 ErbStG, Steuersätze nach § 19 mit Härteausgleich, Familienheim und Vergleich einer Übertragung in zwei Zehnjahresschritten.">
 <link rel="canonical" href="https://www.steuerberaterin-hodzic.de/erbschaftsteuer-rechner">
-<!-- DEMO: vor dem Livegang durch index,follow ersetzen -->
-<meta name="robots" content="noindex,nofollow">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Kanzlei Jasmina Hodzic">
@@ -20,9 +19,7 @@
 <meta name="geo.placename" content="München-Solln">
 <meta name="theme-color" content="#F7F4ED">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%237C2B34'/%3E%3Ctext x='20' y='27' text-anchor='middle' font-family='Georgia,serif' font-size='17' fill='%23F7F4ED'%3EJH%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Inter+Tight:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Schriften selbst gehostet (assets/fonts/), bewusst ohne preload -->
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
 {
@@ -123,6 +120,7 @@
           <a href="leistungen/jahresabschluss-steuererklaerung-muenchen.html">Jahresabschluss &amp; Steuererklärung<s>Bilanz, EÜR, alle Erklärungen</s></a>
           <a href="leistungen/erbschaftsteuer-schenkungsteuer-muenchen.html">Erbschaft- &amp; Schenkungsteuer<s>Schwerpunkt der Kanzlei</s></a>
           <a href="leistungen/internationales-steuerrecht-muenchen.html">Internationales Steuerrecht<s>Zwei Länder, zwei Systeme</s></a>
+          <a href="leistungen/umstrukturierung-umwandlung-muenchen.html">Umstrukturierung &amp; Umwandlung<s>Rechtsform, Holding, Nachfolge</s></a>
         </div>
       </div>
       <a href="index.html#preise">Preise</a>
@@ -146,11 +144,12 @@
           <button data-v="ehegatte" role="radio" aria-checked="false">Ehegatte / Lebenspartner</button>
           <button data-v="kind" class="an" role="radio" aria-checked="true">Kind / Stiefkind</button>
           <button data-v="enkel" role="radio" aria-checked="false">Enkel</button>
+          <button data-v="urenkel" role="radio" aria-checked="false">Urenkel / weitere Abkömmlinge</button>
           <button data-v="eltern" role="radio" aria-checked="false">Eltern / Großeltern</button>
           <button data-v="geschwister" role="radio" aria-checked="false">Geschwister, Nichte/Neffe</button>
           <button data-v="sonstige" role="radio" aria-checked="false">Sonstige, auch Lebensgefährte</button>
         </div>
-        <p class="hilf">Das Verhältnis entscheidet über Steuerklasse und Freibetrag — es wirkt stärker auf das Ergebnis als die Höhe des Vermögens.</p>
+        <p class="hilf">Das Verhältnis entscheidet über Steuerklasse und Freibetrag — es wirkt stärker auf das Ergebnis als die Höhe des Vermögens. <b>Sonderfall:</b> Ist das verbindende Kind vorverstorben, tritt der Enkel an seine Stelle und erhält 400.000 € statt 200.000 €. Wählen Sie dann „Kind / Stiefkind“.</p>
       </div>
 
       <div class="rg"><span class="lb">Zweitens — Erbschaft oder Schenkung?</span>
@@ -168,7 +167,7 @@
 
       <div class="rg"><span class="lb">Davon selbstgenutztes Familienheim</span>
         <div class="zeile"><input type="text" inputmode="numeric" id="r-heim" value="0" aria-label="Wert des Familienheims in Euro"><span class="eh">€</span></div>
-        <p class="hilf">Befreit nach § 13 ErbStG, wenn das Heim zehn Jahre weiter selbst genutzt wird. Bei Kindern nur bis 200 m² Wohnfläche.</p>
+        <p class="hilf">Befreit nach § 13 ErbStG — beim Ehegatten in voller Höhe, beim Kind nur im Erbfall und nur bis 200 m² Wohnfläche. Eine <b>Schenkung</b> des Familienheims an ein Kind ist nicht befreit.</p>
       </div>
 
       <div class="rg" id="r-flaeche-feld" style="display:none;flex-direction:column">
@@ -183,15 +182,15 @@
       </div>
 
       <div class="rg"><span class="lb">Weiteres</span>
-        <button class="schalt" id="r-hausrat" aria-pressed="false"><span class="bx">✓</span>Hausrat und bewegliche Gegenstände sind enthalten</button>
-        <p class="hilf">Steuerklasse I: bis 41.000 € Hausrat. Klassen II und III: 12.000 € zusammen. <span id="r-wert-anz" class="nur-sr">600.000 €</span><span id="r-heim-anz" class="nur-sr">0 €</span></p>
+        <button class="schalt" id="r-hausrat" aria-pressed="false"><span class="bx">✓</span>Im Erwerb ist Hausrat enthalten</button>
+        <p class="hilf">Steuerklasse I: Hausrat bis 41.000 € (§ 13 Abs. 1 Nr. 1 lit. a). Klassen II und III: 12.000 €. Für andere bewegliche Gegenstände gilt ein eigener, kleinerer Betrag, der hier nicht mitgerechnet wird. <span id="r-wert-anz" class="nur-sr">600.000 €</span><span id="r-heim-anz" class="nur-sr">0 €</span></p>
       </div>
 
     </div>
 
     <aside class="rw-r" aria-live="polite">
       <div class="kopfz"><span>Ihr Ergebnis</span><b>Steuerklasse <span id="r-klasse">I</span></b></div>
-      <div class="rw-gross"><s>Voraussichtliche Steuer</s><b id="r-steuer">11.000 €</b></div>
+      <div class="rw-gross"><s>Überschlägige Steuer — unverbindlich</s><b id="r-steuer">11.000 €</b></div>
       <div class="rw-mini">
         <div><s>Freibetrag (§ 16)</s><b id="r-freibetrag">400.000 €</b></div>
         <div><s>Steuerpflichtiger Erwerb</s><b id="r-stpfl">200.000 €</b></div>
@@ -201,11 +200,12 @@
       <div class="rw-weg" id="r-weg"></div>
       <div class="rw-fenster" id="r-fenster">
         <span class="lb">Wenn zu Lebzeiten in zwei Schritten übertragen würde</span>
-        <p>Der Freibetrag steht alle zehn Jahre erneut zur Verfügung. Zwei Übertragungen mit zehn Jahren Abstand ergäben:</p>
+        <p>Der Freibetrag steht alle zehn Jahre erneut zur Verfügung. Zwei gleich große Übertragungen mit mindestens zehn Jahren Abstand ergäben überschlägig:</p>
         <div class="paar">
-          <div><s>Steuer in zwei Schritten</s><b class="gut" id="r-zwei">—</b></div>
+          <div><s>Zusammen in zwei Schritten</s><b class="gut" id="r-zwei">—</b></div>
           <div><s>Unterschied</s><b id="r-ersparnis">—</b></div>
         </div>
+        <p style="font-size:.74rem;color:var(--p42);font-weight:300;margin-top:.8rem">Vereinfachte Gegenüberstellung gleich großer Teilübertragungen. Ob eine Aufteilung sinnvoll ist, hängt von Versorgungsbedarf, Alter, Vermögensart und Familiensituation ab.</p>
       </div>
     </aside>
   </div>
@@ -220,7 +220,7 @@
   es wird ausschließlich im Browser gerechnet und nichts gespeichert. Nicht berücksichtigt sind unter anderem der
   Versorgungsfreibetrag nach § 17 ErbStG, die Verschonung von Betriebsvermögen nach §§ 13a und 13b ErbStG, die Anrechnung
   ausländischer Steuer nach § 21 ErbStG, Nutzungsrechte, Pflichtteile und Nachlassverbindlichkeiten. Diese Punkte können
-  das Ergebnis erheblich verändern. Für eine verbindliche Berechnung ist eine Prüfung des Einzelfalls erforderlich.</p>
+  das Ergebnis erheblich verändern. Vorerwerbe werden nach § 14 ErbStG vereinfacht mit der fiktiven Steuer nach heutigem Recht angerechnet; der steuerpflichtige Erwerb wird nach § 10 ErbStG auf volle 100 € abgerundet. Für eine verbindliche Berechnung ist eine Prüfung des Einzelfalls erforderlich.</p>
 </div></section>
 
 <section class="sek s-weiss"><div class="in">
@@ -251,6 +251,7 @@
         <a class="l" href="leistungen/jahresabschluss-steuererklaerung-muenchen.html">Jahresabschluss</a>
         <a class="l" href="leistungen/erbschaftsteuer-schenkungsteuer-muenchen.html">Erbschaft- &amp; Schenkungsteuer</a>
         <a class="l" href="leistungen/internationales-steuerrecht-muenchen.html">Internationales Steuerrecht</a>
+        <a class="l" href="leistungen/umstrukturierung-umwandlung-muenchen.html">Umstrukturierung &amp; Umwandlung</a>
         <a class="l" href="index.html#leistungen">Umstrukturierung</a>
         <a class="l" href="index.html#leistungen">Steuergestaltung</a></div>
       <div><p class="t">Kanzlei</p>
@@ -275,7 +276,7 @@
       <p><b>Berufsbezeichnung</b> Steuerberaterin (verliehen in der Bundesrepublik Deutschland) · <b>Zuständige Kammer</b> Steuerberaterkammer München, Nederlinger Str. 9, 80638 München</p>
       <p><b>Berufsrechtliche Regelungen</b> Steuerberatungsgesetz (StBerG), Durchführungsverordnung (DVStB), Steuerberatervergütungsverordnung (StBVV), Berufsordnung (BOStB) — einsehbar bei der Bundessteuerberaterkammer, bstbk.de</p>
       <p><b>Berufshaftpflichtversicherung</b> Generali Versicherungs AG, 90313 Nürnberg · räumlicher Geltungsbereich: Bundesrepublik Deutschland</p>
-      <p><b>Streitschlichtung</b> Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <p><b>Verbraucherstreitbeilegung</b> Keine Bereitschaft und keine Verpflichtung zur Teilnahme an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle.</p>
     </div>
     <div class="fu">
       <p>© 2026 Kanzlei Jasmina Hodzic · Steuerberaterin · Wirtschaftsjuristin · LL.M. · M.A.</p>

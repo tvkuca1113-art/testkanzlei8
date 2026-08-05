@@ -25,6 +25,7 @@
     ehegatte:    { name: 'Ehegatte / eingetragener Lebenspartner', erb: [1, 500000], sch: [1, 500000] },
     kind:        { name: 'Kind / Stiefkind',                       erb: [1, 400000], sch: [1, 400000] },
     enkel:       { name: 'Enkel',                                  erb: [1, 200000], sch: [1, 200000] },
+    urenkel:     { name: 'Urenkel / weitere Abkömmlinge',           erb: [1, 100000], sch: [1, 100000] },
     eltern:      { name: 'Eltern / Großeltern',                    erb: [1, 100000], sch: [2,  20000] },
     geschwister: { name: 'Geschwister, Nichte/Neffe, Schwiegerkind', erb: [2, 20000], sch: [2, 20000] },
     sonstige:    { name: 'Sonstige, auch Lebensgefährte',          erb: [3,  20000], sch: [3, 20000] }
@@ -67,21 +68,29 @@
     var kl = (e.art === 'erb' ? v.erb : v.sch)[0];
     var fb = (e.art === 'erb' ? v.erb : v.sch)[1];
 
-    /* Familienheim (§ 13 Abs. 1 Nr. 4b/4c) */
+    /* Familienheim — die Befreiung haengt davon ab, WER erwirbt und WIE:
+         § 13 Abs. 1 Nr. 4a  Schenkung unter Ehegatten        -> frei, ohne Frist, ohne Flaechengrenze
+         § 13 Abs. 1 Nr. 4b  Erbfall, Ehegatte                -> frei, zehn Jahre Selbstnutzung
+         § 13 Abs. 1 Nr. 4c  Erbfall, Kind                    -> frei bis 200 m², zehn Jahre Selbstnutzung
+       Eine Schenkung des Familienheims an ein Kind ist NICHT befreit. */
     var heimFrei = 0, heimHinweis = '';
     if (e.heimWert > 0) {
       if (e.verhaeltnis === 'ehegatte') {
         heimFrei = e.heimWert;
-        heimHinweis = 'Familienheim beim Ehegatten in voller Höhe außer Ansatz — Bedingung: zehn Jahre weiter selbst genutzt.';
-      } else if (e.verhaeltnis === 'kind') {
+        heimHinweis = e.art === 'sch'
+          ? 'Die Zuwendung des Familienheims unter Ehegatten ist nach § 13 Abs. 1 Nr. 4a ErbStG steuerfrei — ohne Flächengrenze und ohne Behaltensfrist.'
+          : 'Das Familienheim bleibt beim Ehegatten nach § 13 Abs. 1 Nr. 4b ErbStG außer Ansatz — Bedingung: zehn Jahre weiter selbst genutzt.';
+      } else if (e.verhaeltnis === 'kind' && e.art === 'erb') {
         var anteil = e.wohnflaeche > 200 ? 200 / e.wohnflaeche : 1;
         heimFrei = Math.round(e.heimWert * anteil);
         heimHinweis = anteil < 1
-          ? 'Beim Kind ist die Befreiung auf 200 m² begrenzt. Bei ' + e.wohnflaeche +
-            ' m² bleiben rund ' + Math.round(anteil * 100) + ' % des Wertes außer Ansatz.'
-          : 'Familienheim beim Kind bis 200 m² Wohnfläche außer Ansatz — Bedingung: zehn Jahre weiter selbst genutzt.';
+          ? 'Beim Kind ist die Befreiung nach § 13 Abs. 1 Nr. 4c ErbStG auf 200 m² Wohnfläche begrenzt. Bei ' +
+            e.wohnflaeche + ' m² bleiben rund ' + Math.round(anteil * 100) + ' % des Wertes außer Ansatz.'
+          : 'Das Familienheim bleibt beim Kind bis 200 m² Wohnfläche außer Ansatz — Bedingung: zehn Jahre weiter selbst genutzt.';
+      } else if (e.verhaeltnis === 'kind') {
+        heimHinweis = 'Achtung: Die Befreiung für das Familienheim gilt bei Kindern nur für den Erwerb von Todes wegen (§ 13 Abs. 1 Nr. 4c ErbStG). Eine Schenkung des Familienheims an ein Kind ist nicht befreit und wird hier deshalb voll angesetzt.';
       } else {
-        heimHinweis = 'Die Befreiung für das Familienheim gilt nur für Ehegatten, eingetragene Lebenspartner und Kinder.';
+        heimHinweis = 'Die Befreiung für das Familienheim gilt nur für Ehegatten und eingetragene Lebenspartner sowie — beim Erwerb von Todes wegen — für Kinder.';
       }
     }
 
@@ -104,7 +113,12 @@
       var stpflVor = Math.floor(Math.max(0, vor - fb) / 100) * 100;
       abzug = steuer(stpflVor, kl).betrag;
     }
+    /* § 14 Abs. 3: Der Abzug darf die Steuer nicht unter den Betrag druecken,
+       der sich fuer den jetzigen Erwerb allein ergeben wuerde. */
+    var stpflAllein = Math.floor(Math.max(0, nachSach - fb) / 100) * 100;
+    var steuerAllein = steuer(stpflAllein, kl).betrag;
     var faellig = Math.max(0, s.betrag - abzug);
+    if (vor > 0) faellig = Math.max(faellig, steuerAllein);
 
     /* Vergleich: Übertragung zu Lebzeiten in zwei Schritten mit zehn Jahren Abstand */
     var haelfte = Math.floor(Math.max(0, nachSach) / 2);

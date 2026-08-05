@@ -1,13 +1,5 @@
-# Kanzlei Jasmina Hodzic — robots.txt
-# ACHTUNG: Solange die Seite auf einer Testdomain läuft, ist alles gesperrt.
-# VOR DEM LIVEGANG: den Disallow-Block unten entfernen und den Allow-Block aktivieren.
-
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /api/
 
-# ---- AB LIVEGANG AUF DER ECHTEN DOMAIN AKTIVIEREN ----
-# User-agent: *
-# Allow: /
-# Disallow: /api/
-#
-# Sitemap: https://www.steuerberaterin-hodzic.de/sitemap.xml
+Sitemap: https://www.steuerberaterin-hodzic.de/sitemap.xml

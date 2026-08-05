@@ -4,15 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Datenschutzerklärung | Kanzlei Jasmina Hodzic, Steuerberaterin München</title>
-<meta name="description" content="Datenschutzerklärung der Kanzlei Jasmina Hodzic: Informationen nach Art. 13 DSGVO zu Server-Logdateien, Kontaktformular, Kartendarstellung und Ihren Betroffenenrechten.">
+<meta name="description" content="Datenschutzerklärung der Kanzlei Jasmina Hodzic: Informationen nach Art. 13 DSGVO zu Hosting, Server-Logdateien, Kontaktformular, Kartendarstellung und Ihren Betroffenenrechten.">
 <link rel="canonical" href="https://www.steuerberaterin-hodzic.de/datenschutz">
-<!-- DEMO: vor dem Livegang durch index,follow ersetzen -->
-<meta name="robots" content="noindex,nofollow">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="Kanzlei Jasmina Hodzic">
 <meta property="og:title" content="Datenschutzerklärung | Kanzlei Jasmina Hodzic, Steuerberaterin München">
-<meta property="og:description" content="Datenschutzerklärung der Kanzlei Jasmina Hodzic: Informationen nach Art. 13 DSGVO zu Server-Logdateien, Kontaktformular, Kartendarstellung und Ihren Betroffenenrechten.">
+<meta property="og:description" content="Datenschutzerklärung der Kanzlei Jasmina Hodzic: Informationen nach Art. 13 DSGVO zu Hosting, Server-Logdateien, Kontaktformular, Kartendarstellung und Ihren Betroffenenrechten.">
 <meta property="og:url" content="https://www.steuerberaterin-hodzic.de/datenschutz">
 <meta property="og:image" content="https://www.steuerberaterin-hodzic.de/img/og-kanzlei-hodzic.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -20,6 +19,7 @@
 <meta name="geo.placename" content="München-Solln">
 <meta name="theme-color" content="#F7F4ED">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%237C2B34'/%3E%3Ctext x='20' y='27' text-anchor='middle' font-family='Georgia,serif' font-size='17' fill='%23F7F4ED'%3EJH%3C/text%3E%3C/svg%3E">
+<!-- Schriften selbst gehostet (assets/fonts/), bewusst ohne preload -->
 <link rel="stylesheet" href="assets/css/site.css">
 <script type="application/ld+json">
 {}
@@ -31,7 +31,7 @@
 <span id="top"></span>
 <nav id="nav" aria-label="Hauptnavigation">
   <div class="in">
-    <a class="lg" href="index.html"><b>Jasmina Hodzic</b><s>Steuerkanzlei München</s></a>
+    <a class="lg" href="index.html" aria-label="Kanzlei Jasmina Hodzic — Startseite"><b>Jasmina Hodzic</b><s>Steuerkanzlei München</s></a>
     <div class="nl" id="nl">
       <div class="dd">
         <button aria-expanded="false" aria-haspopup="true">Leistungen <i>&#9662;</i></button>
@@ -40,14 +40,14 @@
           <a href="leistungen/jahresabschluss-steuererklaerung-muenchen.html">Jahresabschluss &amp; Steuererklärung<s>Bilanz, EÜR, alle Erklärungen</s></a>
           <a href="leistungen/erbschaftsteuer-schenkungsteuer-muenchen.html">Erbschaft- &amp; Schenkungsteuer<s>Schwerpunkt der Kanzlei</s></a>
           <a href="leistungen/internationales-steuerrecht-muenchen.html">Internationales Steuerrecht<s>Zwei Länder, zwei Systeme</s></a>
+          <a href="leistungen/umstrukturierung-umwandlung-muenchen.html">Umstrukturierung &amp; Umwandlung<s>Rechtsform, Holding, Nachfolge</s></a>
         </div>
       </div>
       <a href="index.html#preise">Preise</a>
       <a href="index.html#check">Steuer-Check</a>
-      <a href="erbschaftsteuer-rechner.html">Rechner</a>
       <a href="index.html#ueber">Über mich</a>
       <a href="steuerberater-bosnisch-kroatisch-serbisch-muenchen.html">Sprachen <span>BS·HR·SR</span></a>
-      <a class="lang" href="english-speaking-tax-advisor-munich.html" hreflang="en" lang="en">EN</a>
+      <a href="index.html#faq">Fragen</a>
       <a class="cta" href="index.html#kontakt">Erstgespräch</a>
     </div>
     <button id="burg" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nl"><i></i><i></i><i></i></button>
@@ -57,102 +57,127 @@
 <main id="inhalt"><div class="legal">
 
 <h1>Datenschutzerklärung</h1>
-<p>Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Nachfolgend informieren wir Sie
-gemäß Art. 13 und 14 DSGVO darüber, welche Daten beim Besuch dieser Website verarbeitet werden.</p>
-
-<div class="warn">
-  <p><strong>Hinweis zum Stand dieser Erklärung.</strong> Diese Datenschutzerklärung beschreibt die
-  Verarbeitungen, die in der aktuellen technischen Fassung dieser Website tatsächlich stattfinden.
-  Sie ist vor dem Livegang durch eine fachkundige Stelle zu prüfen und an die tatsächlich eingesetzten
-  Dienste (Hosting-Anbieter, Formularversand, gegebenenfalls Analyse) anzupassen. Ändern sich die
-  eingesetzten Dienste, ist auch diese Erklärung anzupassen.</p>
-</div>
+<p>Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Nachfolgend informiere ich Sie gemäß
+Art. 13 und 14 DSGVO darüber, welche Daten beim Besuch dieser Website verarbeitet werden, zu
+welchem Zweck und auf welcher Rechtsgrundlage.</p>
 
 <h2>1. Verantwortliche Stelle</h2>
 <p>Jasmina Hodzic, Steuerberaterin<br>
 Mühlthaler Str. 91c, 81475 München<br>
 Telefon: <a href="tel:+4989541990940">+49 (0) 89 541 990 940</a><br>
 E-Mail: <a href="mailto:info@steuerberaterin-hodzic.de">info@steuerberaterin-hodzic.de</a></p>
-<p>Eine Datenschutzbeauftragte oder ein Datenschutzbeauftragter ist nach derzeitiger Einschätzung
-nicht zu benennen. Diese Einschätzung ist im Einzelfall zu überprüfen.</p>
+<p>Für Anliegen zum Datenschutz genügt eine formlose Nachricht an diese Kontaktdaten.</p>
 
-<h2>2. Aufruf der Website und Server-Logdateien</h2>
-<p>Beim Aufruf dieser Website übermittelt Ihr Browser technisch notwendige Daten an den Server des
-Hosting-Anbieters. Diese werden in Logdateien gespeichert:</p>
+<h3>Berufliche Verschwiegenheitspflicht</h3>
+<p>Als Steuerberaterin unterliege ich der gesetzlichen Verschwiegenheitspflicht nach § 57 StBerG und
+§ 203 StGB. Diese gilt zusätzlich und unabhängig neben dem Datenschutzrecht. Mandatsbezogene Daten
+werden ausschließlich im Rahmen des Mandats und der gesetzlichen Aufbewahrungspflichten verarbeitet.</p>
+
+<h2>2. Hosting und Server-Logdateien</h2>
+<p>Diese Website wird bei einem externen Dienstleister betrieben:</p>
+<ul>
+  <li><strong>Vercel Inc.</strong>, 440 N Barranca Ave #4133, Covina, CA 91723, USA</li>
+  <li>Datenschutzhinweise: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">vercel.com/legal/privacy-policy</a></li>
+  <li>Auftragsverarbeitung: <a href="https://vercel.com/legal/dpa" target="_blank" rel="noopener">vercel.com/legal/dpa</a></li>
+</ul>
+<p>Beim Aufruf der Website übermittelt Ihr Browser technisch notwendige Daten an den Server. Diese
+werden in Logdateien verarbeitet:</p>
 <ul>
   <li>IP-Adresse des anfragenden Geräts</li>
   <li>Datum und Uhrzeit des Zugriffs</li>
-  <li>Name und URL der abgerufenen Datei</li>
-  <li>Übertragene Datenmenge und Meldung über den Abrufstatus</li>
-  <li>Verwendeter Browsertyp und Betriebssystem</li>
+  <li>Name und Pfad der abgerufenen Datei</li>
+  <li>Übertragene Datenmenge und Abrufstatus</li>
+  <li>Browsertyp und Betriebssystem</li>
   <li>Gegebenenfalls die zuvor besuchte Seite (Referrer)</li>
 </ul>
-<p><strong>Zweck:</strong> Auslieferung der Website, Gewährleistung der Systemsicherheit und Stabilität,
-Auswertung technischer Fehler.<br>
-<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt im
+<p><strong>Zweck:</strong> Auslieferung der Website, Betriebssicherheit, Abwehr von Angriffen und
+Auswertung technischer Störungen.<br>
+<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse liegt im
 sicheren und störungsfreien Betrieb der Website.<br>
-<strong>Speicherdauer:</strong> Logdaten werden nach kurzer Frist gelöscht oder anonymisiert; die genaue
-Dauer richtet sich nach der Konfiguration des Hosting-Anbieters.</p>
+<strong>Speicherdauer:</strong> Die Logdaten werden vom Dienstleister nur kurzfristig verarbeitet und
+danach gelöscht oder anonymisiert. Eine Zusammenführung mit anderen Datenquellen findet nicht statt.</p>
+<p>Mit dem Anbieter besteht ein Vertrag über die Auftragsverarbeitung nach Art. 28 DSGVO.</p>
 
-<h3>Auftragsverarbeitung Hosting</h3>
-<p>Diese Website wird bei einem externen Dienstleister gehostet. Mit dem Anbieter besteht ein Vertrag
-über die Auftragsverarbeitung nach Art. 28 DSGVO. Findet dabei eine Übermittlung in ein Drittland statt,
-erfolgt diese auf Grundlage geeigneter Garantien, insbesondere der Standardvertragsklauseln der
-Europäischen Kommission.</p>
-<p><em>Vor dem Livegang zu ergänzen: Name und Anschrift des Hosting-Anbieters sowie der Serverstandort.</em></p>
+<h3>Übermittlung in die USA</h3>
+<p>Der Anbieter hat seinen Sitz in den USA, sodass eine Verarbeitung in einem Drittland stattfinden
+kann. Grundlage der Übermittlung ist der Angemessenheitsbeschluss der Europäischen Kommission zum
+EU-US Data Privacy Framework, unter dem der Anbieter zertifiziert ist, ergänzt um die
+Standardvertragsklauseln nach Art. 46 Abs. 2 lit. c DSGVO im Auftragsverarbeitungsvertrag.</p>
 
 <h2>3. Cookies und lokale Speicherung</h2>
-<p>Diese Website setzt <strong>keine Tracking-Cookies</strong> und bindet keine Werbe- oder Analysedienste ein.</p>
-<p>Verwendet wird ausschließlich der lokale Speicher Ihres Browsers (<em>localStorage</em> und
-<em>sessionStorage</em>), um Ihre Auswahl im Einwilligungsbanner festzuhalten. Diese Information verbleibt
-auf Ihrem Gerät und wird nicht an uns übertragen. Sie können sie jederzeit über die Einstellungen Ihres
-Browsers löschen.</p>
+<p>Diese Website setzt <strong>keine Tracking-Cookies</strong> und bindet keine Werbe-, Analyse- oder
+Reichweitenmessdienste ein. Es findet keine Profilbildung statt.</p>
+<p>Verwendet wird ausschließlich der lokale Speicher Ihres Browsers (<em>localStorage</em>), um Ihre
+Auswahl im Einwilligungshinweis festzuhalten. Diese Information verbleibt auf Ihrem Gerät und wird
+nicht an mich übertragen. Sie können sie jederzeit über die Einstellungen Ihres Browsers löschen.</p>
 <p><strong>Rechtsgrundlage:</strong> § 25 Abs. 2 Nr. 2 TDDDG — die Speicherung ist erforderlich, um den
-von Ihnen ausdrücklich gewünschten Dienst (Merken Ihrer Auswahl) bereitzustellen.</p>
+von Ihnen ausdrücklich gewünschten Dienst, nämlich das Merken Ihrer Auswahl, bereitzustellen.</p>
 
-<h2>4. Kontaktformular, E-Mail und Telefon</h2>
-<p>Wenn Sie uns über das Kontaktformular, per E-Mail, Telefon oder WhatsApp kontaktieren, verarbeiten
-wir die von Ihnen mitgeteilten Daten, um Ihre Anfrage zu bearbeiten.</p>
-<p><strong>Über das Formular erhobene Daten:</strong> Name, E-Mail-Adresse, optional Telefonnummer und
-Firma, Art des Anliegens sowie Ihre Nachricht.</p>
+<h2>4. Kontaktformular</h2>
+<p>Über das Formular werden folgende Daten erhoben: <strong>Name und E-Mail-Adresse</strong> (Pflichtfelder)
+sowie <strong>Telefonnummer, Firma, Art des Anliegens und Ihre Nachricht</strong> (freiwillig).</p>
+<p><strong>Ablauf der Verarbeitung:</strong> Die Eingaben werden per TLS verschlüsselt an eine
+Serverfunktion auf der oben genannten Hosting-Plattform übermittelt und von dort als E-Mail an das
+Kanzleipostfach weitergeleitet. Für den Versand wird ein E-Mail-Dienstleister eingesetzt:</p>
+<ul>
+  <li><strong>Resend, Inc.</strong>, 2261 Market Street #5039, San Francisco, CA 94114, USA</li>
+  <li>Datenschutzhinweise: <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">resend.com/legal/privacy-policy</a></li>
+  <li>Auftragsverarbeitung: <a href="https://resend.com/legal/dpa" target="_blank" rel="noopener">resend.com/legal/dpa</a></li>
+</ul>
+<p>Mit dem Dienstleister besteht ein Auftragsverarbeitungsvertrag nach Art. 28 DSGVO. Die Übermittlung
+in die USA erfolgt auf Grundlage des EU-US Data Privacy Framework und ergänzender
+Standardvertragsklauseln. Eine dauerhafte Speicherung Ihrer Nachricht beim Versanddienstleister
+findet nicht statt; verarbeitet werden dort lediglich die zur Zustellung erforderlichen Daten.</p>
+<p><strong>Spamschutz:</strong> Das Formular enthält ein für Sie unsichtbares Zusatzfeld, das
+ausschließlich von automatisierten Programmen ausgefüllt wird. Zusätzlich wird die Anzahl der
+Übermittlungen je IP-Adresse für eine Stunde im Arbeitsspeicher der Serverfunktion begrenzt. Es
+erfolgt keine dauerhafte Speicherung dieser Zähldaten und keine Auswertung zu anderen Zwecken.</p>
 <p><strong>Zweck:</strong> Bearbeitung Ihrer Anfrage und Anbahnung eines möglichen Mandats.<br>
-<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO bei Anfragen zur Anbahnung oder Durchführung
-eines Vertragsverhältnisses, im Übrigen Art. 6 Abs. 1 lit. a DSGVO auf Grundlage Ihrer Einwilligung.
-Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen.<br>
+<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO bei Anfragen zur Anbahnung oder
+Durchführung eines Vertragsverhältnisses; im Übrigen Art. 6 Abs. 1 lit. a DSGVO auf Grundlage Ihrer
+Einwilligung, die Sie jederzeit mit Wirkung für die Zukunft widerrufen können.<br>
 <strong>Speicherdauer:</strong> Ihre Anfrage wird gelöscht, sobald sie abschließend bearbeitet ist und
 keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Kommt ein Mandat zustande, gelten die
-Aufbewahrungsfristen aus § 147 AO und § 257 HGB sowie die berufsrechtlichen Vorgaben.</p>
-<p>Der Versand des Formulars erfolgt verschlüsselt über TLS. Die Übermittlung an das E-Mail-Postfach der
-Kanzlei erfolgt über einen Versanddienstleister, mit dem ein Auftragsverarbeitungsvertrag besteht.</p>
-<p><strong>Berufsgeheimnis:</strong> Als Steuerberaterin unterliege ich der gesetzlichen Verschwiegenheitspflicht
-nach § 57 StBerG und § 203 StGB. Diese gilt zusätzlich zum Datenschutzrecht.</p>
-<p><strong>WhatsApp:</strong> Wenn Sie uns über WhatsApp kontaktieren, verarbeitet der Betreiber des Dienstes
-Daten nach eigenen Bestimmungen, auf die wir keinen Einfluss haben. Für vertrauliche Sachverhalte empfehlen
-wir Telefon, E-Mail oder ein persönliches Gespräch.</p>
+Aufbewahrungsfristen nach § 147 AO und § 257 HGB sowie die berufsrechtlichen Vorgaben.</p>
 
-<h2>5. Schriftarten</h2>
-<p>Die auf dieser Website verwendeten Schriftarten werden <strong>ausschließlich von unserem eigenen
-Server ausgeliefert</strong>. Es findet keine Verbindung zu Servern von Google Fonts oder anderen
-Anbietern statt; Ihre IP-Adresse wird dabei nicht an Dritte übermittelt.</p>
-<p>Verwendet werden die Schriften Libre Caslon Display, Inter Tight und IBM Plex Mono, jeweils unter
-der SIL Open Font License.</p>
+<h2>5. Kontakt per E-Mail, Telefon und WhatsApp</h2>
+<p>Wenn Sie mich per E-Mail oder Telefon kontaktieren, verarbeite ich die von Ihnen mitgeteilten Daten
+zur Bearbeitung Ihres Anliegens. Rechtsgrundlage und Speicherdauer entsprechen Abschnitt 4.</p>
+<p>Auf dieser Website befindet sich ein Link zu <strong>WhatsApp</strong>. Es handelt sich um eine reine
+Verlinkung; beim Aufruf dieser Website werden dabei keine Daten an den Anbieter übertragen. Erst wenn
+Sie den Link anklicken und den Dienst nutzen, verarbeitet der Anbieter Daten nach eigenen
+Bestimmungen, auf die ich keinen Einfluss habe. <strong>Für vertrauliche und mandatsbezogene
+Sachverhalte bitte ich um Kontakt per Telefon, E-Mail oder im persönlichen Gespräch.</strong></p>
 
-<h2>6. Kartendarstellung</h2>
-<p>Auf der Kontaktseite kann eine Karte von OpenStreetMap angezeigt werden. Die Karte wird
+<h2>6. Schriftarten</h2>
+<p>Die verwendeten Schriftarten werden ausschließlich vom Server dieser Website ausgeliefert. Eine
+Verbindung zu Google Fonts oder anderen Anbietern findet nicht statt; Ihre IP-Adresse wird dabei nicht
+an Dritte übermittelt. Eingesetzt werden Libre Caslon Display, Inter Tight und IBM Plex Mono, jeweils
+unter der SIL Open Font License.</p>
+
+<h2>7. Kartendarstellung</h2>
+<p>Im Kontaktbereich kann eine Karte von OpenStreetMap angezeigt werden. Die Karte wird
 <strong>erst geladen, wenn Sie sie durch Klick auf die Schaltfläche ausdrücklich anfordern</strong>.
 Vorher findet keine Verbindung zu OpenStreetMap statt.</p>
-<p>Mit dem Klick werden Ihre IP-Adresse und technische Verbindungsdaten an die OpenStreetMap Foundation,
-St John's Innovation Centre, Cowley Road, Cambridge, CB4 0WS, Vereinigtes Königreich, übermittelt.<br>
-<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Ihre Einwilligung durch den Klick).<br>
+<p>Mit dem Klick werden Ihre IP-Adresse und technische Verbindungsdaten an die OpenStreetMap
+Foundation, St John's Innovation Centre, Cowley Road, Cambridge, CB4 0WS, Vereinigtes Königreich,
+übermittelt.<br>
+<strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO — Ihre Einwilligung durch den Klick.<br>
 Datenschutzhinweise: <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">osmfoundation.org</a></p>
 
-<h2>7. Verlinkung sozialer Netzwerke</h2>
-<p>Im Fußbereich befinden sich einfache Textlinks zu Profilen der Kanzlei bei Facebook, Instagram und
-TikTok. Es handelt sich um <strong>reine Verlinkungen ohne eingebettete Inhalte</strong>. Beim bloßen
-Aufruf dieser Website werden keine Daten an die Betreiber der Netzwerke übertragen. Erst wenn Sie einen
-Link anklicken, gelten die Bestimmungen des jeweiligen Anbieters.</p>
+<h2>8. Soziale Netzwerke</h2>
+<p>Im Fußbereich befinden sich einfache Textlinks zu Profilen bei Facebook, Instagram und TikTok. Es
+handelt sich um <strong>reine Verlinkungen ohne eingebettete Inhalte</strong>. Beim Aufruf dieser
+Website werden keine Daten an die Betreiber der Netzwerke übertragen. Erst wenn Sie einen Link
+anklicken, gelten die Bestimmungen des jeweiligen Anbieters.</p>
 
-<h2>8. Ihre Rechte</h2>
+<h2>9. Rechner und Steuer-Check</h2>
+<p>Der Erbschaftsteuer-Rechner und der Steuer-Check auf dieser Website arbeiten
+<strong>ausschließlich in Ihrem Browser</strong>. Ihre Eingaben werden nicht an mich oder an Dritte
+übermittelt, nicht gespeichert und nicht ausgewertet. Eine automatisierte Entscheidungsfindung
+einschließlich Profiling findet nicht statt.</p>
+
+<h2>10. Ihre Rechte</h2>
 <p>Sie haben nach der DSGVO folgende Rechte:</p>
 <ul>
   <li><strong>Auskunft</strong> über die zu Ihrer Person verarbeiteten Daten (Art. 15 DSGVO)</li>
@@ -163,25 +188,23 @@ Link anklicken, gelten die Bestimmungen des jeweiligen Anbieters.</p>
   <li><strong>Widerspruch</strong> gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21 DSGVO)</li>
   <li><strong>Widerruf einer erteilten Einwilligung</strong> mit Wirkung für die Zukunft (Art. 7 Abs. 3 DSGVO)</li>
 </ul>
-<p>Zur Ausübung genügt eine formlose Nachricht an die oben genannten Kontaktdaten.</p>
 
-<h2>9. Beschwerderecht bei der Aufsichtsbehörde</h2>
+<h2>11. Beschwerderecht bei der Aufsichtsbehörde</h2>
 <p>Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO).
-Für die Kanzlei zuständig ist:</p>
+Zuständig ist:</p>
 <p>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)<br>
 Promenade 27, 91522 Ansbach<br>
 <a href="https://www.lda.bayern.de/" target="_blank" rel="noopener">www.lda.bayern.de</a></p>
 
-<h2>10. Pflicht zur Bereitstellung</h2>
+<h2>12. Pflicht zur Bereitstellung</h2>
 <p>Die Bereitstellung Ihrer Daten ist weder gesetzlich noch vertraglich vorgeschrieben. Ohne Angabe von
-Name und E-Mail-Adresse können wir eine Anfrage über das Kontaktformular jedoch nicht bearbeiten.</p>
+Name und E-Mail-Adresse kann eine Anfrage über das Kontaktformular jedoch nicht bearbeitet werden.</p>
 
-<h2>11. Automatisierte Entscheidungsfindung</h2>
-<p>Eine automatisierte Entscheidungsfindung einschließlich Profiling findet nicht statt. Der auf der
-Startseite angebotene Steuer-Check läuft ausschließlich im Browser auf Ihrem Gerät; die von Ihnen dort
-gemachten Angaben werden <strong>nicht an uns übertragen und nicht gespeichert</strong>.</p>
+<h2>13. Änderungen dieser Erklärung</h2>
+<p>Diese Erklärung wird angepasst, wenn sich die auf dieser Website eingesetzten Verfahren oder
+Dienstleister ändern oder die Rechtslage dies erfordert.</p>
 
-<p class="stand">Stand: August 2026 — vor dem Livegang fachlich zu prüfen</p>
+<p class="stand">Stand: August 2026</p>
 
 </div></main>
 <footer>
@@ -191,9 +214,9 @@ gemachten Angaben werden <strong>nicht an uns übertragen und nicht gespeichert<
         <p class="cl">Ordnung schafft <em>Ruhe.</em></p>
         <p style="font-size:.85rem;color:var(--p72);font-weight:300;margin-bottom:1rem;max-width:34ch">Steuerkanzlei in München-Solln für Unternehmen, Familien und Vermögen. Persönlich, digital, mehrsprachig.</p>
         <div class="so">
-          <a href="https://www.facebook.com/people/Jasmina-Hodzic/100094933616518/" target="_blank" rel="noopener" ><span aria-hidden="true">fb</span><span class="nur-sr">Facebook der Kanzlei</span></a>
-          <a href="https://www.instagram.com/steuerberaterinjasmina/" target="_blank" rel="noopener" ><span aria-hidden="true">ig</span><span class="nur-sr">Instagram der Kanzlei</span></a>
-          <a href="https://www.tiktok.com/@steuerberaterinjasmina" target="_blank" rel="noopener" ><span aria-hidden="true">tt</span><span class="nur-sr">TikTok der Kanzlei</span></a>
+          <a href="https://www.facebook.com/SteuerberaterinJasminaHodzic/" target="_blank" rel="noopener" aria-label="Facebook der Kanzlei">fb</a>
+          <a href="https://www.instagram.com/steuerberaterinjasmina/" target="_blank" rel="noopener" aria-label="Instagram der Kanzlei">ig</a>
+          <a href="https://www.tiktok.com/@steuerberaterinjasmina" target="_blank" rel="noopener" aria-label="TikTok der Kanzlei">tt</a>
         </div>
       </div>
       <div><p class="t">Leistungen</p>
@@ -201,6 +224,7 @@ gemachten Angaben werden <strong>nicht an uns übertragen und nicht gespeichert<
         <a class="l" href="leistungen/jahresabschluss-steuererklaerung-muenchen.html">Jahresabschluss</a>
         <a class="l" href="leistungen/erbschaftsteuer-schenkungsteuer-muenchen.html">Erbschaft- &amp; Schenkungsteuer</a>
         <a class="l" href="leistungen/internationales-steuerrecht-muenchen.html">Internationales Steuerrecht</a>
+        <a class="l" href="leistungen/umstrukturierung-umwandlung-muenchen.html">Umstrukturierung &amp; Umwandlung</a>
         <a class="l" href="index.html#leistungen">Umstrukturierung</a>
         <a class="l" href="index.html#leistungen">Steuergestaltung</a></div>
       <div><p class="t">Kanzlei</p>
@@ -210,13 +234,8 @@ gemachten Angaben werden <strong>nicht an uns übertragen und nicht gespeichert<
         <a class="l" href="index.html#jahr">Ihr Steuerjahr</a>
         <a class="l" href="index.html#ueber">Über mich</a>
         <a class="l" href="steuerberater-bosnisch-kroatisch-serbisch-muenchen.html">Sprachen · BS·HR·SR</a>
-        <a class="l" href="index.html#faq">Häufige Fragen</a>
-        <a class="l" href="erbschaftsteuer-rechner.html">Erbschaftsteuer-Rechner</a>
-        <a class="l" href="english-speaking-tax-advisor-munich.html" hreflang="en" lang="en">English</a></div>
-      <div><p class="t">Kooperationspartner</p>
-        <div class="pp">Edvin Hodzic<s>Vermögensberater, Deutsche Vermögensberatung AG</s></div>
-        <div class="pp">Nermina Arnaut<s>Buchhaltungsservice</s></div>
-        <p class="t" style="margin-top:1.6rem">Kontakt</p>
+        <a class="l" href="index.html#faq">Häufige Fragen</a></div>
+      <div><p class="t">Kontakt</p>
         <a class="l" href="tel:+4989541990940">+49 (0) 89 541 990 940</a>
         <a class="l" href="mailto:info@steuerberaterin-hodzic.de">info@steuerberaterin-hodzic.de</a>
         <a class="l" href="https://wa.me/4989541990940" target="_blank" rel="noopener">WhatsApp ↗</a>
@@ -228,7 +247,7 @@ gemachten Angaben werden <strong>nicht an uns übertragen und nicht gespeichert<
       <p><b>Berufsbezeichnung</b> Steuerberaterin (verliehen in der Bundesrepublik Deutschland) · <b>Zuständige Kammer</b> Steuerberaterkammer München, Nederlinger Str. 9, 80638 München</p>
       <p><b>Berufsrechtliche Regelungen</b> Steuerberatungsgesetz (StBerG), Durchführungsverordnung (DVStB), Steuerberatervergütungsverordnung (StBVV), Berufsordnung (BOStB) — einsehbar bei der Bundessteuerberaterkammer, bstbk.de</p>
       <p><b>Berufshaftpflichtversicherung</b> Generali Versicherungs AG, 90313 Nürnberg · räumlicher Geltungsbereich: Bundesrepublik Deutschland</p>
-      <p><b>Streitschlichtung</b> Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <p><b>Verbraucherstreitbeilegung</b> Keine Bereitschaft und keine Verpflichtung zur Teilnahme an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle.</p>
     </div>
     <div class="fu">
       <p>© 2026 Kanzlei Jasmina Hodzic · Steuerberaterin · Wirtschaftsjuristin · LL.M. · M.A.</p>
