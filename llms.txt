@@ -26,6 +26,12 @@ E-Mail: info@steuerberaterin-hodzic.de
 - GmbH und UG: ab 349 € / Monat
 - Projekte (Erbschaft, international, Umstrukturierung): individuell nach Gegenstandswert
 
+## Werkzeuge
+- [Erbschaftsteuer-Rechner](https://www.steuerberaterin-hodzic.de/erbschaftsteuer-rechner): Berechnung von Freibetrag (§ 16 ErbStG), steuerpflichtigem Erwerb, Steuersatz (§ 19 ErbStG) einschliesslich Haerteausgleich nach § 19 Abs. 3, Befreiung fuer das Familienheim sowie Vergleich einer Uebertragung in zwei Zehnjahresschritten. Rechnet ausschliesslich im Browser, ohne Datenuebertragung.
+
+## Weitere Sprachen
+- [English-speaking tax advisor in Munich](https://www.steuerberaterin-hodzic.de/english-speaking-tax-advisor-munich): Beratung auf Englisch fuer Internationals in Muenchen - erste deutsche Steuererklaerung, RSUs und Aktienoptionen, Zu- und Wegzug, Freiberufler-Anmeldung, Doppelbesteuerungsabkommen. Hinweis: keine US-Steuererklaerungen, nur die deutsche Seite.
+
 ## Rechtliches
 - [Impressum](https://www.steuerberaterin-hodzic.de/impressum)
 - [Datenschutzerklärung](https://www.steuerberaterin-hodzic.de/datenschutz)

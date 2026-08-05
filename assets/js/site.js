@@ -304,7 +304,7 @@
     function laden() {
       if (geladen) return; geladen = true;
       var a = document.createElement('script');
-      a.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+      a.src = '/assets/js/three.min.js';   /* selbst gehostet, kein Fremd-CDN */
       a.onload = function () {
         var b = document.createElement('script');
         b.src = '/assets/js/scenes.js';

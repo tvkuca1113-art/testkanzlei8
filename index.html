@@ -7,6 +7,12 @@
 <title>Steuerberaterin München-Solln | Kanzlei Jasmina Hodzic</title>
 <meta name="description" content="Steuerberaterin in München-Solln: Buchhaltung, Jahresabschluss, Erbschaftsteuer und internationales Steuerrecht. Feste Ansprechpartnerin, transparente Preise, Beratung auf Deutsch, Bosnisch, Kroatisch, Serbisch und Englisch.">
 <link rel="canonical" href="https://www.steuerberaterin-hodzic.de/">
+<link rel="alternate" hreflang="de" href="https://www.steuerberaterin-hodzic.de/">
+<link rel="alternate" hreflang="en" href="https://www.steuerberaterin-hodzic.de/english-speaking-tax-advisor-munich">
+<link rel="alternate" hreflang="bs" href="https://www.steuerberaterin-hodzic.de/steuerberater-bosnisch-kroatisch-serbisch-muenchen">
+<link rel="alternate" hreflang="hr" href="https://www.steuerberaterin-hodzic.de/steuerberater-bosnisch-kroatisch-serbisch-muenchen">
+<link rel="alternate" hreflang="sr" href="https://www.steuerberaterin-hodzic.de/steuerberater-bosnisch-kroatisch-serbisch-muenchen">
+<link rel="alternate" hreflang="x-default" href="https://www.steuerberaterin-hodzic.de/">
 
 <!-- DEMO: Solange die Seite auf einer Testdomain läuft, bleibt sie aus dem Index.
      VOR DEM LIVEGANG auf der echten Domain: nächste Zeile durch
@@ -39,10 +45,9 @@
       imagesrcset="img/jasmina-hodzic-steuerberaterin-muenchen-640.webp 640w, img/jasmina-hodzic-steuerberaterin-muenchen-900.webp 900w, img/jasmina-hodzic-steuerberaterin-muenchen-1280.webp 1280w"
       imagesizes="(max-width:1080px) 100vw, 45vw" type="image/webp">
 
-<!-- SCHRIFTEN — vor dem Livegang selbst hosten, siehe LIES-MICH.md (DSGVO) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Inter+Tight:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Schriften selbst gehostet (assets/fonts/). Bewusst OHNE preload:
+     gemessen kostete das Vorladen 1,8 s LCP, weil es dem Heldenbild
+     Bandbreite entzieht. font-display:swap deckt die Anzeige ab. -->
 
 <link rel="stylesheet" href="assets/css/site.css">
 
@@ -97,7 +102,7 @@
 
 <nav id="nav" aria-label="Hauptnavigation">
   <div class="in">
-    <a class="lg" href="/" aria-label="Kanzlei Jasmina Hodzic — Startseite"><b>Jasmina Hodzic</b><s>Steuerkanzlei München</s></a>
+    <a class="lg" href="/"><b>Jasmina Hodzic</b><s>Steuerkanzlei München</s></a>
     <div class="nl" id="nl">
       <div class="dd">
         <button aria-expanded="false" aria-haspopup="true">Leistungen <i>▾</i></button>
@@ -110,9 +115,10 @@
       </div>
       <a href="#preise">Preise</a>
       <a href="#check">Steuer-Check</a>
+      <a href="erbschaftsteuer-rechner.html">Rechner</a>
       <a href="#ueber">Über mich</a>
       <a href="steuerberater-bosnisch-kroatisch-serbisch-muenchen.html">Sprachen <span>BS·HR·SR</span></a>
-      <a href="#faq">Fragen</a>
+      <a class="lang" href="english-speaking-tax-advisor-munich.html" hreflang="en" lang="en">EN</a>
       <a class="cta" href="#kontakt">Erstgespräch</a>
     </div>
     <button id="burg" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nl"><i></i><i></i><i></i></button>
@@ -552,9 +558,9 @@
         <p class="cl">Ordnung schafft <em>Ruhe.</em></p>
         <p style="font-size:.85rem;color:var(--p72);font-weight:300;margin-bottom:1rem;max-width:34ch">Steuerkanzlei in München-Solln für Unternehmen, Familien und Vermögen. Persönlich, digital, mehrsprachig.</p>
         <div class="so">
-          <a href="https://www.facebook.com/people/Jasmina-Hodzic/100094933616518/" target="_blank" rel="noopener" aria-label="Facebook der Kanzlei">fb</a>
-          <a href="https://www.instagram.com/steuerberaterinjasmina/" target="_blank" rel="noopener" aria-label="Instagram der Kanzlei">ig</a>
-          <a href="https://www.tiktok.com/@steuerberaterinjasmina" target="_blank" rel="noopener" aria-label="TikTok der Kanzlei">tt</a>
+          <a href="https://www.facebook.com/people/Jasmina-Hodzic/100094933616518/" target="_blank" rel="noopener" ><span aria-hidden="true">fb</span><span class="nur-sr">Facebook der Kanzlei</span></a>
+          <a href="https://www.instagram.com/steuerberaterinjasmina/" target="_blank" rel="noopener" ><span aria-hidden="true">ig</span><span class="nur-sr">Instagram der Kanzlei</span></a>
+          <a href="https://www.tiktok.com/@steuerberaterinjasmina" target="_blank" rel="noopener" ><span aria-hidden="true">tt</span><span class="nur-sr">TikTok der Kanzlei</span></a>
         </div>
       </div>
       <div><p class="t">Leistungen</p>
@@ -571,7 +577,9 @@
         <a class="l" href="index.html#jahr">Ihr Steuerjahr</a>
         <a class="l" href="index.html#ueber">Über mich</a>
         <a class="l" href="steuerberater-bosnisch-kroatisch-serbisch-muenchen.html">Sprachen · BS·HR·SR</a>
-        <a class="l" href="index.html#faq">Häufige Fragen</a></div>
+        <a class="l" href="index.html#faq">Häufige Fragen</a>
+        <a class="l" href="erbschaftsteuer-rechner.html">Erbschaftsteuer-Rechner</a>
+        <a class="l" href="english-speaking-tax-advisor-munich.html" hreflang="en" lang="en">English</a></div>
       <div><p class="t">Kooperationspartner</p>
         <div class="pp">Edvin Hodzic<s>Vermögensberater, Deutsche Vermögensberatung AG</s></div>
         <div class="pp">Nermina Arnaut<s>Buchhaltungsservice</s></div>
