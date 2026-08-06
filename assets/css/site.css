@@ -878,3 +878,243 @@ footer .in{width:var(--w);margin:0 auto}
 .nl .lang:hover{border-color:var(--wein);color:var(--wein)}
 .nl .lang::after{display:none}
 @media (max-width:1080px){.nl .lang{border:0;border-bottom:1px solid var(--linie)!important;padding:.75rem 0;font-family:var(--fd);font-size:1.6rem}}
+
+
+/* ==========================================================================
+   MOBIL — Korrekturen aus der Sichtprüfung auf 390 px
+   ========================================================================== */
+.nurgross{display:inline}
+
+@media (max-width:1080px){
+
+  /* Navigation stand durchsichtig über dem Porträt: „Steuerkanzlei München"
+     verschwand im Bild. Auf kleinen Schirmen daher immer auf Papier. */
+  #nav{background:rgba(247,244,237,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+       box-shadow:0 1px 0 var(--linie)}
+  #nav .in{padding:.85rem 0}
+
+  /* Leserichtung wie am Desktop: erst Text, dann Porträt.
+     Vorher stand das Bild oben und die Überschrift lag unter der ersten Bildschirmhöhe. */
+  .held-l{order:1;padding:1.6rem 5vw 2.2rem}
+  .held-r{order:2;height:auto;aspect-ratio:4/5;max-height:62svh;min-height:0}
+  .held-r img{object-position:50% 12%}
+
+  /* Das Siegel überdeckte das Gesicht. Die Angabe steht ohnehin
+     direkt darunter in der Qualifikationsliste. */
+  .held-r .badge{display:none}
+
+  /* Signatur: „TAXATION" fiel als Waise in die zweite Zeile */
+  .nurgross{display:none}
+  .held-r .sig{left:5vw;right:5vw;bottom:1.2rem}
+  .held-r .sig s{font-size:.6rem;letter-spacing:.1em;line-height:1.5}
+  .held-r::after{background:linear-gradient(200deg,rgba(25,28,31,0) 34%,rgba(25,28,31,.72) 100%)}
+
+  .hd-nr{font-size:.62rem;margin-bottom:1.1rem}
+  .hd-t{margin-top:2rem;gap:1.1rem 1.6rem}
+  .hd-t b{font-size:.98rem}
+
+  /* Kleinschrift: Mono-Etiketten lagen bei 8,3–9,6 px */
+  .hd-t s,.kopf .nr,.zg .n,.met .k,.sp .k,.pt .k,.vt .k,.weiter .k,
+  .rand .lb,.prosa .kasten .lb,.rw-fenster .lb,.rw-hinweise .lb,
+  .jq .it s,.chk-r .hd span,.chk-m s,.rw-mini s,.rw-gross s,
+  .fo .t,.brot,.ukopf .meta span,.lg s,.pp-stufe .st s,
+  .cg .lb,.rg>.lb,.fld label,.kinf .r s,.ueb2 .box .lb,.ueb2 .box .rw s,
+  .portal .pb b,.portal .st,.sk .th,.g-box s,.spr .lb,.dg-l .n,.lp .n{
+    font-size:.68rem!important;letter-spacing:.1em}
+  .held-r .sig s,.ueb-ban figcaption b{font-size:.62rem!important}
+  .prosa .tab th{font-size:.68rem}
+  .pr-hin,.rw-recht,.chk-f small,.karte p,.portal .hin{font-size:.84rem}
+  .fu p,.recht p{font-size:.8rem}
+  .legal .stand{font-size:.7rem}
+
+  /* Tippziele: Fußzeilen-Links lagen bei 20 px Höhe */
+  .fo .l{padding:.55rem 0}
+  .fu .lk{gap:1.1rem}
+  .fu .lk a{padding:.5rem 0;display:inline-block}
+  .lp .mehr,.prosa a,.dsg a,.g-box a{padding-top:.3rem;padding-bottom:.3rem;display:inline-block}
+  .rand nav a{padding:.6rem 0 .6rem .9rem}
+  .dd .men a{padding:.7rem 0 .7rem 1rem}
+}
+
+@media (max-width:560px){
+  .held-r{max-height:56svh}
+  #held h1{font-size:clamp(2rem,8.6vw,2.9rem)}
+  .hd-c{gap:.6rem}
+  .hd-c .btn{flex:1 1 100%}
+}
+
+/* Breite Tabellen: waren am Handrand abgeschnitten statt scrollbar */
+.tab-huelle{max-width:100%}
+@media (max-width:760px){
+  .tab-huelle{overflow-x:auto;-webkit-overflow-scrolling:touch;
+    border-right:1px solid var(--linie);margin-right:-1px}
+  .tab-huelle .tab{min-width:34rem}
+  .tab-huelle::after{content:"seitlich scrollbar →";display:block;font-family:var(--fm);
+    font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--t46);
+    padding:.2rem 0 .9rem;position:sticky;left:0}
+}
+
+@media (max-width:1080px){
+  /* Der Zusatz im Logo wiederholte wortwörtlich die Zeile darunter */
+  .lg s{display:none}
+  .lg b{font-size:1.24rem}
+
+  /* Untergrenze für die Mono-Etiketten — mehrere lagen noch bei 7,5–9,9 px */
+  s,.nr,.k,.n,.lb,.t,.go,.th,.eh,.hd-nr,.tm,.chk-cap,.jahr-hin,.brot,
+  .bs span,.jahr-tabs button,.spr-tags span,.zg .go,.ukopf .meta span,
+  .pp-stufe .st s,.weiter .k,.sk .who,.g-box s{font-size:.7rem;letter-spacing:.09em}
+  .pt .pz s{font-size:.78rem}
+  .rw-gross s,.rw-mini s,.chk-m s{font-size:.74rem}
+
+  /* Tippziele auf mindestens 30 px bringen */
+  .nl>a,.nl .dd>button{padding:.85rem 0}
+  .kinf .r a{padding:.25rem 0;display:inline-block}
+  .fq>button{padding:1.15rem .1rem}
+  .lp>button{padding:1.3rem .1rem}
+}
+
+@media (max-width:1080px){
+  /* Restliche Etiketten, die von spezifischeren Regeln überschrieben wurden */
+  .dd .men a s{font-size:.7rem;letter-spacing:.06em}
+  .lp .mehr,.rand .kt .btn,.g-box a{font-size:.72rem}
+  .cg .rv,.cg .rv span{font-size:.72rem}
+  .jahr-3d .mid s{font-size:.7rem}
+  .ueb-ban figcaption b{font-size:.7rem!important}
+  .portal .pb s,.portal .st,.portal .bar .lb,.portal .bar .lb span{font-size:.7rem}
+  .chk-cap,.jahr-hin{font-size:.7rem}
+  .lp .mehr{padding:.5rem 0}
+}
+
+@media (max-width:1080px){
+  .fo .pp s,.rand .prt s,.held-r .sig s,.sk .who,.recht p,.fu p,
+  .rw-fenster p,.rw-fenster .paar s,.rg .hilf,.pt li,.pr-hin{font-size:.72rem}
+  .held-r .sig s{font-size:.68rem!important}
+  .fo .pp s{letter-spacing:.05em}
+}
+
+@media (max-width:1080px){
+  /* Bei 97 % Deckkraft schimmerte der Text darunter durch den Weichzeichner.
+     Auf kleinen Schirmen deshalb volle Deckung, ohne backdrop-filter. */
+  #nav,#nav.fest{background:var(--pap);backdrop-filter:none;-webkit-backdrop-filter:none}
+  /* Signatur auf dem Porträt: gerader Verlauf trägt zuverlässiger als der schräge */
+  .held-r::after{background:linear-gradient(180deg,rgba(25,28,31,0) 52%,rgba(25,28,31,.82) 100%)}
+}
+
+
+@media (max-width:1080px){
+  /* Der Zusatz im Logo wiederholte wortwörtlich die Zeile darunter */
+  .lg s{display:none}
+  .lg b{font-size:1.24rem}
+
+  /* Untergrenze für die Mono-Etiketten — mehrere lagen noch bei 7,5–9,9 px */
+  s,.nr,.k,.n,.lb,.t,.go,.th,.eh,.hd-nr,.tm,.chk-cap,.jahr-hin,.brot,
+  .bs span,.jahr-tabs button,.spr-tags span,.zg .go,.ukopf .meta span,
+  .pp-stufe .st s,.weiter .k,.sk .who,.g-box s{font-size:.7rem;letter-spacing:.09em}
+  .pt .pz s{font-size:.78rem}
+  .rw-gross s,.rw-mini s,.chk-m s{font-size:.74rem}
+
+  /* Tippziele auf mindestens 30 px bringen */
+  .nl>a,.nl .dd>button{padding:.85rem 0}
+  .kinf .r a{padding:.25rem 0;display:inline-block}
+  .fq>button{padding:1.15rem .1rem}
+  .lp>button{padding:1.3rem .1rem}
+}
+
+@media (max-width:1080px){
+  /* Restliche Etiketten, die von spezifischeren Regeln überschrieben wurden */
+  .dd .men a s{font-size:.7rem;letter-spacing:.06em}
+  .lp .mehr,.rand .kt .btn,.g-box a{font-size:.72rem}
+  .cg .rv,.cg .rv span{font-size:.72rem}
+  .jahr-3d .mid s{font-size:.7rem}
+  .ueb-ban figcaption b{font-size:.7rem!important}
+  .portal .pb s,.portal .st,.portal .bar .lb,.portal .bar .lb span{font-size:.7rem}
+  .chk-cap,.jahr-hin{font-size:.7rem}
+  .lp .mehr{padding:.5rem 0}
+}
+
+@media (max-width:1080px){
+  .fo .pp s,.rand .prt s,.held-r .sig s,.sk .who,.recht p,.fu p,
+  .rw-fenster p,.rw-fenster .paar s,.rg .hilf,.pt li,.pr-hin{font-size:.72rem}
+  .held-r .sig s{font-size:.68rem!important}
+  .fo .pp s{letter-spacing:.05em}
+}
+
+@media (max-width:1080px){
+  /* Bei 97 % Deckkraft schimmerte der Text darunter durch den Weichzeichner.
+     Auf kleinen Schirmen deshalb volle Deckung, ohne backdrop-filter. */
+  #nav,#nav.fest{background:var(--pap);backdrop-filter:none;-webkit-backdrop-filter:none}
+  /* Signatur auf dem Porträt: gerader Verlauf trägt zuverlässiger als der schräge */
+  .held-r::after{background:linear-gradient(180deg,rgba(25,28,31,0) 52%,rgba(25,28,31,.82) 100%)}
+}
+
+
+
+
+/* ==========================================================================
+   MOBIL — Variante A „Titelseite"
+   Das ganze Porträt steht im ersten Bildschirm, der Titel liegt auf dem
+   dunklen Sakko. Nichts wird beschnitten, nichts verdeckt das Gesicht.
+   Umgesetzt über Rasterüberlagerung: Bild und Titel teilen sich dieselbe
+   Rasterzelle. .held-l wird dafür per display:contents aufgelöst.
+   ========================================================================== */
+.hd-sig{display:none}
+
+@media (max-width:1080px){
+  #held{display:grid;grid-template-columns:100%;grid-template-rows:auto auto;
+    padding-top:3.55rem;min-height:0}
+  .held-l{display:contents}
+
+  /* Bild und Titel in derselben Zelle */
+  .held-r{grid-column:1;grid-row:1;order:0;align-self:start;justify-self:stretch;
+    height:auto;min-height:0;max-height:none;aspect-ratio:2/3;position:relative;overflow:hidden}
+  .held-r img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+  .held-r .badge,.held-r .sig{display:none}
+  /* Verlauf: oben nur angedeutet, unten trägt er den Titel */
+  /* Der Verlauf setzt erst unter dem Kinn ein (ca. 52 %), damit das Gesicht
+     unberührt bleibt und der Titel trotzdem auf gleichmässig dunklem Feld liegt. */
+  .held-r::after{background:linear-gradient(180deg,
+    rgba(25,28,31,.10) 0%,rgba(25,28,31,0) 26%,
+    rgba(25,28,31,.20) 52%,rgba(25,28,31,.60) 70%,
+    rgba(25,28,31,.80) 84%,rgba(25,28,31,.88) 100%)}
+
+  /* Der Titelblock deckt dieselbe Zelle wie das Bild ab. Kein Rechnen mit
+     Bildhöhen: Augenbraue oben, Titel unten per margin-top:auto. */
+  .held-text{grid-column:1;grid-row:1;align-self:stretch;justify-self:stretch;
+    display:flex;flex-direction:column;z-index:3;padding:1.35rem 5.5vw 1.5rem;
+    color:var(--pap);pointer-events:none;min-height:0}
+  .held-text .hd-nr{margin:0;color:rgba(247,244,237,.92);font-size:.7rem;letter-spacing:.19em;
+    display:flex;align-items:center;gap:.7rem;flex:0 0 auto}
+  .held-text .hd-nr::before{display:block;content:"";width:2rem;height:1px;background:var(--gold);flex:0 0 auto}
+  #held h1{margin-top:auto}
+  #held h1{font-size:clamp(1.95rem,8.2vw,2.6rem);line-height:1.04;letter-spacing:-.022em;color:var(--pap)}
+  #held h1 em{color:#E7B168}
+  .hd-sig{display:block;font-family:var(--fm);font-size:.66rem;letter-spacing:.15em;
+    text-transform:uppercase;color:rgba(247,244,237,.76);margin-top:.9rem;padding-top:.75rem;
+    border-top:1px solid rgba(247,244,237,.24)}
+
+  /* Papier darunter */
+  .held-rest{grid-column:1;grid-row:2;padding:1.9rem 5.5vw 2.4rem;background:var(--pap)}
+  .hd-p{margin-top:0;font-size:1.02rem;max-width:none}
+  .hd-c{margin-top:1.6rem;gap:0;flex-direction:column;flex-wrap:nowrap;align-items:stretch}
+  .hd-c .btn{width:100%;padding:1.15rem 1.4rem}
+  .hd-c .zweit{align-self:flex-start;width:auto;border:0;background:none;
+    padding:1rem 0 .2rem;color:var(--wein);letter-spacing:.13em}
+  .hd-c .zweit u{display:none}
+  .hd-c .zweit span::after{content:" →"}
+
+  /* Qualifikationen als Kontobuch-Zeilen */
+  .hd-t{display:block;margin-top:1.9rem;padding-top:0;border-top:1px solid var(--linie)}
+  .hd-t div{display:flex;flex-direction:row;justify-content:space-between;align-items:baseline;
+    gap:1.2rem;padding:.66rem 0;border-bottom:1px solid var(--pap3)}
+  .hd-t div:last-child{border-bottom:0}
+  .hd-t s{flex-shrink:0;padding-top:.15rem}
+  .hd-t b{text-align:right;font-size:1rem;line-height:1.3}
+
+  /* Einblendung: der Vorhang deckt nur das Bild ab */
+  .held-r .cut{z-index:2}
+  body.los .held-text{animation:none}
+}
+@media (max-width:560px){
+  #held h1{font-size:clamp(1.85rem,8.6vw,2.4rem)}
+  .held-text{padding:1.25rem 5.5vw 1.3rem}
+}

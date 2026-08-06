@@ -37,10 +37,14 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%237C2B34'/%3E%3Ctext x='20' y='27' text-anchor='middle' font-family='Georgia,serif' font-size='17' fill='%23F7F4ED'%3EJH%3C/text%3E%3C/svg%3E">
 
 <!-- Größtes Bild früh anfordern — verbessert den LCP-Wert spürbar -->
-<link rel="preload" as="image" fetchpriority="high"
+<link rel="preload" as="image" fetchpriority="high" media="(max-width:1080px)"
+      href="img/jasmina-hodzic-hoch-720.webp"
+      imagesrcset="img/jasmina-hodzic-hoch-540.webp 540w, img/jasmina-hodzic-hoch-720.webp 720w, img/jasmina-hodzic-hoch-1080.webp 1080w"
+      imagesizes="100vw" type="image/webp">
+<link rel="preload" as="image" fetchpriority="high" media="(min-width:1081px)"
       href="img/jasmina-hodzic-steuerberaterin-muenchen-900.webp"
       imagesrcset="img/jasmina-hodzic-steuerberaterin-muenchen-640.webp 640w, img/jasmina-hodzic-steuerberaterin-muenchen-900.webp 900w, img/jasmina-hodzic-steuerberaterin-muenchen-1280.webp 1280w"
-      imagesizes="(max-width:1080px) 100vw, 45vw" type="image/webp">
+      imagesizes="45vw" type="image/webp">
 
 <!-- Schriften selbst gehostet (assets/fonts/). Bewusst OHNE preload:
      gemessen kostete das Vorladen 1,8 s LCP, weil es dem Heldenbild
@@ -126,16 +130,20 @@
 <span id="top"></span>
 <header id="held">
   <div class="held-l">
-    <p class="hd-nr">Steuerkanzlei München-Solln</p>
-    <h1>
-      <span class="mk"><i>Ordnung in Ihren</i></span>
-      <span class="mk d2"><i>Zahlen. Ruhe in</i></span>
-      <span class="mk d3"><i><em>Ihrem Kopf.</em></i></span>
-    </h1>
+    <div class="held-text">
+      <p class="hd-nr">Steuerkanzlei München-Solln</p>
+      <h1>
+        <span class="mk"><i>Ordnung in Ihren</i></span>
+        <span class="mk d2"><i>Zahlen. Ruhe in</i></span>
+        <span class="mk d3"><i><em>Ihrem Kopf.</em></i></span>
+      </h1>
+      <p class="hd-sig">Jasmina Hodzic · Steuerberaterin</p>
+    </div>
+    <div class="held-rest">
     <p class="hd-p"><b>Steuerberaterin in München-Solln</b> für Unternehmen, Familien und Vermögen. Feste Ansprechpartnerin, digitale Zusammenarbeit, Beratung in fünf Sprachen.</p>
     <div class="hd-c">
       <a class="btn b-wein" href="#kontakt" data-mag><u></u><span>Erstgespräch — kostenlos</span></a>
-      <a class="btn b-leer" href="#check" data-mag><u></u><span>Steuer-Check · 30 Sek.</span></a>
+      <a class="btn b-leer zweit" href="#check" data-mag><u></u><span>Steuer-Check · 30 Sek.</span></a>
     </div>
     <!-- BESTÄTIGEN: von Jasmina Hodzic freizugeben, siehe FREIGABE-CHECKLISTE.md -->
     <div class="hd-t">
@@ -144,20 +152,29 @@
       <div><s>Abschlüsse</s><b>LL.M. · M.A. Taxation</b></div>
       <div><s>Beratung in</s><b>DE · BS · HR · SR · EN</b></div>
     </div>
+    </div>
   </div>
   <div class="held-r">
     <picture>
+      <!-- Eigener Hochformat-Zuschnitt fürs Handy: der Desktop-Zuschnitt 4:5
+           verlöre dort Schultern und Kinn. -->
+      <source media="(max-width:1080px)" type="image/webp"
+        srcset="img/jasmina-hodzic-hoch-540.webp 540w, img/jasmina-hodzic-hoch-720.webp 720w, img/jasmina-hodzic-hoch-1080.webp 1080w"
+        sizes="100vw">
+      <source media="(max-width:1080px)"
+        srcset="img/jasmina-hodzic-hoch-540.jpg 540w, img/jasmina-hodzic-hoch-720.jpg 720w, img/jasmina-hodzic-hoch-1080.jpg 1080w"
+        sizes="100vw">
       <source type="image/webp"
         srcset="img/jasmina-hodzic-steuerberaterin-muenchen-640.webp 640w, img/jasmina-hodzic-steuerberaterin-muenchen-900.webp 900w, img/jasmina-hodzic-steuerberaterin-muenchen-1280.webp 1280w"
-        sizes="(max-width:1080px) 100vw, 45vw">
+        sizes="45vw">
       <img src="img/jasmina-hodzic-steuerberaterin-muenchen-900.jpg"
         srcset="img/jasmina-hodzic-steuerberaterin-muenchen-640.jpg 640w, img/jasmina-hodzic-steuerberaterin-muenchen-900.jpg 900w, img/jasmina-hodzic-steuerberaterin-muenchen-1280.jpg 1280w"
-        sizes="(max-width:1080px) 100vw, 45vw"
+        sizes="45vw"
         alt="Jasmina Hodzic, Steuerberaterin in München-Solln" width="900" height="1125" fetchpriority="high" decoding="async">
     </picture>
     <div class="cut"></div>
     <div class="badge"><b>Steuerberaterkammer München</b><s>Bestellt &amp; Kammermitglied</s></div>
-    <div class="sig"><b>Jasmina Hodzic</b><s>Steuerberaterin · Wirtschaftsjuristin · LL.M. · M.A. Taxation</s></div>
+    <div class="sig"><b>Jasmina Hodzic</b><s>Steuerberaterin<span class="nurgross"> · Wirtschaftsjuristin</span> · LL.M. · M.A.<span class="nurgross"> Taxation</span></s></div>
   </div>
 </header>
 
